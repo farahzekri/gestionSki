@@ -14,4 +14,11 @@ public interface InscriptionRepository extends JpaRepository<Inscription,Long> {
              "on e.cours member of m.Cours " +
             "where m.numMoniteur =:idMoniteur and e.cours.support =:supportcours ")
     List<Integer> numWeeksCourseOfInstructorBySupport(@Param("idMoniteur") Long numMoniteur,@Param("supportcours") Support support);
+
+    @Query("SELECT COUNT(i) FROM Inscription i " +
+            "WHERE i.cours.numCours = :numCours " +
+            "AND (i.cours.typecours = tn.esprit.gestionski.entities.Typecours.COLLECTIOTION_ENFANT " +
+            "OR i.cours.typecours = tn.esprit.gestionski.entities.Typecours.COLLECTION_ADULTE)")
+
+    long countSkiersByCourse(@Param("numCours") long numCours);
 }

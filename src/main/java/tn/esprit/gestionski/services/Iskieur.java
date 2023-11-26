@@ -1,5 +1,6 @@
 package tn.esprit.gestionski.services;
 
+import org.springframework.data.repository.query.Param;
 import tn.esprit.gestionski.entities.Piste;
 import tn.esprit.gestionski.entities.Skieur;
 import tn.esprit.gestionski.entities.TypeAbonnement;
@@ -16,4 +17,6 @@ public interface Iskieur {
     public Skieur assignSkieurToPiste(long numSkieur, long numPiste);
     public Skieur addSkieurandAssigntocours(Skieur skieur,long numcours);
     public List<Skieur> retriveSkieurByTypeabonnement(TypeAbonnement type);
+
+
 }

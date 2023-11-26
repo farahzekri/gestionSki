@@ -51,4 +51,12 @@ public class Inscriptioncontollers {
     public List<Integer> numWeeksCourseOfInstructorBySupport(@PathVariable long numMoniteur, @PathVariable Support support){
         return iInscription.numWeeksCourseOfInstructorBySupport(numMoniteur,support);
    }
+    @GetMapping("/countSkiersByCourse/{numCours}")
+    public long  getSkiersByCourse(@PathVariable long numCours){
+        return iInscription.getnombredeskieur(numCours);
+    }
+    @PostMapping("/addinscriptiontoskieurandcours/{numSkieur}/{numCours}")
+    public Inscription addRegistrationAndAssignToSkierAndCourse(@RequestBody Inscription inscription, @PathVariable long numSkieur,@PathVariable long numCours){
+        return iInscription.addRegistrationAndAssignToSkierAndCourse(inscription,numSkieur,numCours);
+    }
 }

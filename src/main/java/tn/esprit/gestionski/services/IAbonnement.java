@@ -5,6 +5,7 @@ package tn.esprit.gestionski.services;
 import tn.esprit.gestionski.entities.Abonnement;
 import tn.esprit.gestionski.entities.TypeAbonnement;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface IAbonnement {
     public Abonnement findbynum(long numAbon);
     public List<Abonnement> getAbonnementByTypeAbon(TypeAbonnement typeAbonnement);
     public  List<Abonnement> getByDateDebutBetween(Date date1,Date date2);
+    public float sumduprix(LocalDate date);
+
 }

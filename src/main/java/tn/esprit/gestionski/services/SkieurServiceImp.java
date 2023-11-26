@@ -77,12 +77,12 @@ public class SkieurServiceImp implements Iskieur{
     public Skieur findbynum(long numSkieur) {
         return skieurRepository.findById(numSkieur).orElse(null);
     }
-    @Scheduled(fixedRate = 30000)
+  /* @Scheduled(fixedRate = 30000)
     public void fixedRate(){
         log.info("methode whith fixed rate");
-    }
-    @Scheduled(cron = "0 33 16 * * *")
+    }*/
+   /* @Scheduled(cron = "0 33 16 * * *")
     public void cronemethode(){
         log.info("methode whith crone");
-    }
+    }*/
 }

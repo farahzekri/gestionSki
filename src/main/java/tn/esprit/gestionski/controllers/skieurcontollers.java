@@ -43,4 +43,5 @@ public class skieurcontollers {
     public List<Skieur> retrievetypeabonne(@PathVariable TypeAbonnement type){
          return iskieur.retriveSkieurByTypeabonnement(type);
     }
+
 }

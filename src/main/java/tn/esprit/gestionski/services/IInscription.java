@@ -16,4 +16,6 @@ public interface IInscription {
     public Inscription addInscriptionandassignetocours(Inscription n,long numCours);
     public Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, long numSkieur, long numCours);
     public List<Integer> numWeeksCourseOfInstructorBySupport(long numMoniteur, Support support);
+    public  long getnombredeskieur(long numCours);
+
 }
