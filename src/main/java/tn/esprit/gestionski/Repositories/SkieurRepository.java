@@ -14,4 +14,6 @@ public interface SkieurRepository extends JpaRepository<Skieur,Long> {
     List<Skieur> findByAbonnement_TypeAbon(TypeAbonnement typeAbonnement);
 
     Skieur findByAbonnement(Abonnement abonnement);
+
+
 }
